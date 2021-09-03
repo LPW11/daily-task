@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu {
+            margin-top: 30px;
+            这里指的是整个表单的框下移
+        }
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .menu>li {
+            float: left;
+            list-style: none;
+            width: 80px;
+            height: 30px;
+            /* 上两个指的是每一个menu下的list所占的位置,重要：list所占的位置除非用broder显示否则知识一个无形的框 */
+            background-color: grey; 
+            overflow: hidden;
+            /* 意思是超出边框范围的文本进行隐藏起来 */
+        }
+        .show {
+            background-color: red;
+            width: 80px;
+            height: 30px;
+            /* 这里设置的是一个首页所占就占满了整个框的位置 */
+            text-align: center;
+            line-height: 30px;
+            transition: margin 0.5s;
+            /* 这里要好好体会这个动画效果的语法是什么样的 */
+        }
+        .click {
+            background-color: yellow;
+            width: 80px;
+            height: 30px;
+            /* 这里设置的是一个首页所占就占满了整个框的位置 */
+            text-align: center;
+            line-height: 30px;
+            transition: margin 0.5s;
+            /* 这个键值对后面表示的含义是什么要弄清楚 */
+        }
+        /* 当我们鼠标引入点入这个菜单的时候，希望以一种滚动的方式让黄色和红色都上去 */
+        /* 当我们鼠标移入这个li的时候，让上面这个元素 */
+        .menu>li:hover>.show {
+            /* 只有点show这个属性的文本才拥有这样的特性 */
+            margin-top: -30px;
+            /* 为什么是整体上移（是默认的吗？） */
+        }
+    </style>
+</head>
+<body>
+    <!-- 看到设计稿先想他的的布局是怎么样的，然后再想他的样式是怎么样的 -->
+    <ul class="menu">
+        <li>
+            <p class="show">首页</p>
+            <p class="click">首页</p>
+        </li>
+    </ul>
+    <ul class="menu">
+        <li>
+            <p class="show">视频</p>
+            <p class="click">视频</p>
+        </li>
+    </ul>
+    <ul class="menu">
+        <li>
+            <p class="show">图片</p>
+            <p class="click">图片</p>
+        </li>
+    </ul>
+</body>
+</html>

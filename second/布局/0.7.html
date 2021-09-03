@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .static {
+  position: static;
+  /* 和absolute一样只不过是直接定位于body元素 */
+}
+.relative1 {
+  position: relative;
+  background-color: rosybrown;
+}
+.relative2 {
+  position: relative;
+  top: -20px;
+  left: 20px;
+  background-color: white;
+  width: 500px;
+  background-color: red;
+}
+.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  background-color: white;
+}
+    </style>
+</head>
+<body>
+    <div class="static">
+        static 是默认值。
+    </div>
+    <div class="relative1">
+        relative 表现的和 static 一样，除非你添加了一些额外的属性。
+    </div>
+    <div class="relative2">
+        在一个相对定位（position属性的值为relative）的元素上设置 top 、 right 、 bottom 和 left 属性会使其偏离其正常位置。其他的元素的位置则不会受该元素的影响发生位置改变来弥补它偏离后剩下的空隙。
+    </div>    
+    <!-- 由于是块状元素所以独立成行 -->
+    <!-- relativ会脱离文本流 -->
+    <div class="fixed">
+        Hello！暂时不要太关注我哦。
+    </div>
+    <!-- 但是它不是相对于视窗而是相对于最近的“positioned”祖先元素 -->
+    <!-- 或者设置relative -->
+</body>
+
+</html>

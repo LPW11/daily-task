@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = '';
+        var arr = [1,2,3,5,7];
+        for(var i = 0;i <= arr.length;i++){
+            n += arr[i] + '|';
+            // 当前循环到的数列
+        }
+        console.log(n);
+
+        function s() {
+            var n = 0;
+
+        }
+        // 函数可以当作普通的值进行使用，赋值啊之类的都可以
+
+        function f1(s){
+            // var k = 123+s;
+            // 传的值在函数中无限的使用
+            // console.log(k);
+            // 谁调用我这个函数就打印这个传入值
+            // 如果传入的是一个函数后面加括号是不是就会u执行啊
+            s();
+            // 就会找到这个函数调用里面的代码
+        }
+
+        var f2 =function(){
+            console.log(222);
+            // 声明了一个函数叫f2,并且把f2当作参数传入进去
+        }
+        // 不进行调用
+        f1(f2);
+        // f1后右括号会被执行
+        // f2函数会被当作值传入到函数内
+        // 实参是个函数可以
+
+    </script>
+</body>
+</html>

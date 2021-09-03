@@ -1,0 +1,171 @@
+
+
+ul, ol {
+    list-style: none;
+}
+/* 这个是为了让点消失 */
+
+body {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+header {
+    width: 100%;
+    height: 75px;
+    background-color: black;
+    display: flex;
+}
+
+.biaoti {
+    color: white;
+    font-size: 30px;
+    /* margin-top: 10px; */
+    border: 1px solid red;
+    padding: 15px 0;
+    margin-left: 300px;
+    /* 根据他的父元素设置 */
+    /* 怎么设置对齐 */
+}
+
+.biaoti p {
+    margin: 0;
+}
+.logo {
+    height: 100%;
+    width: 73%;
+    /* 这个作者有点变态，实际上没什么作用吧，估计是想把剩下的区域也搞一个盒子 */
+}
+.logo2 {
+    display: flex;
+    color: white;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 1300px;
+    top: 35px;
+}
+
+.logo2 li {
+    padding-right: 30px;
+    display: flex;
+}
+
+.douban img {
+    height: 30px;
+    width: 30px;
+    
+}
+.email img {
+    height: 30px;
+    width: 30px;
+    
+}
+.git img {
+    height: 30px;
+    width: 30px;
+    
+}
+.github img {
+    height: 30px;
+    width: 30px;
+    
+}
+.rss img {
+    height: 30px;
+    width: 30px;
+    
+}
+.yinyue img {
+    height: 30px;
+    width: 30px;
+    
+}
+
+.nav {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    /* 从上没有任何空间的衔接 */
+}
+
+.nav2 {
+    display: flex;
+    /* 自动有margin和padding的呀 */
+    padding-left: 10%;
+    /* 如果自己想调整的话就自己在添加就可以了 */
+}
+
+.nav2 li {
+    padding-right: 30px;
+    /* 这里的margin是什么作用？ */
+    
+}
+
+.search {
+    margin:10px 0;
+    padding-left: 500px;
+    height: 30px;
+    padding-right: 20px;
+}
+
+.sousuo2 img {
+    width: 30px;
+    height: 30px;
+}
+
+.sousuo2 {
+    margin: 10px 0;
+    padding-left: 10px;
+    padding-left: 5px;
+    background-color: tomato;
+}
+
+.box {
+    display: flex;
+}
+
+main {
+    display: flex;
+    margin: 50px 330px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    
+    
+}
+
+.box1 {
+    width: 750px;
+    height: 300px;
+    background-color: white;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    /* 和padding最大的不同就是用来设置和另一个元素是相连还是相隔 */
+    
+
+}
+aside {
+    flex-direction: column;
+}
+
+.box2 {
+    width: 359px;
+    height: 355px;
+    background-color: yellowgreen;
+    margin-bottom: 50px;
+    margin-left: -330px;
+    margin-top: 50px;
+}
+
+.box4 {
+    width: 355px;
+    height: 235px;
+    background-color: lightblue;
+    margin-bottom: 50px;
+    margin-left: -330px;
+    margin-top: 50px;
+    margin-left: 500px;
+    
+}
+

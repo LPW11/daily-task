@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        li {
+            list-style: none;
+        }
+        /* 这里的层级关系要十分注意语法格式才可以 */
+        .menu>li {
+            /*很重要 一定要这样子写才可以注意原理为什么： */
+            width: 100px;
+            height: 20px;
+            border: 1px solid red;
+            float: left;
+            /* 如果没有设置浮动元素的话就会相互重叠（注意他的原理） */
+        }
+        .menu2>li {
+            /* 这里表示的子级元素也很重要 */
+            height: 0px;
+            overflow: hidden;
+            background-color: blue;
+            transition: height 0.5s;
+            /* 这里指的是形变的属性：这里有四个可以变的方式 */
+            color: white;
+        }
+        /* 如果我想调整子级中li元素我应该怎么设置名称？ */
+        /* 要使用伪元素把消失的子级元素重新显示出来,这里的命名也显得相当重要 */
+        .menu>li:hover > .menu2>li{
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <!-- 这里其实不用再另外设置一个div元素因为ul和div同样是块状元素作用是一样的 -->
+        <li>
+            <!-- 这里使用的是嵌套不用分开单独使用 -->
+            书籍
+            <ul class="menu2">
+                <li>学习手册</li>
+                <li>学习手册</li>
+                <li>学习手册</li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="menu">
+        <li>
+            <!-- 这里使用的是嵌套不用分开单独使用 -->
+            书籍
+            <ul class="menu2">
+                <li>学习手册</li>
+                <li>学习手册</li>
+                <li>学习手册</li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="menu">
+        <li>
+            <!-- 这里使用的是嵌套不用分开单独使用 -->
+            书籍
+            <ul class="menu2">
+                <li>学习手册</li>
+                <li>学习手册</li>
+                <li>学习手册</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

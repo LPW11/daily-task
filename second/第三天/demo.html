@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            height: 400px;
+            width: 600px;
+        }
+        .pic-box {
+            width: 600px;
+            margin: 0 auto;
+            /* 外边距上下是零左右是居中自动对称 */
+            /* 最好是图片的宽度能和设置的盒子的宽度是相同的 */
+            position: relative;
+        }
+        .list {
+            position: absolute;
+            /* 如果这时想把他的参照对象变成父级的话就要在上面多设置一个相对位置 */
+            top: 0px;
+            left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pic-box">
+        <!-- 其实这里设置一个属性也只是一个声明而已，我们可以理解成这个盒子的名字然后通过名字来知道这个盒子的作用 -->
+        <img src="C:\Users\L\Desktop\编程学习\前端\前端实操练习\第三天\pic.jpg" alt=""">
+        <ul class="list">
+            <!-- 同样也是给这个列表取个名字 -->
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+</body>
+</html>

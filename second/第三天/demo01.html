@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 20000px;
+            /* 这里是整个身体的部分网页的高度有多少 */
+            /* body前面不用加顿号这里直接指定的是**，其实a,p之类的都是可以直接指定的知识选择器的不同而已 */
+        }
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 1px solid white;
+            background-color: red;
+        }
+        .pos {
+            /* position: absolute;
+            top: 50px;
+            left: 50px; */
+            /* position: relative; */
+            /* 不脱离文档流而且默认参照物为此元素位置（保留原来元素的位置） */
+            /* top: 50px;
+            left: 50px; */
+            position: fixed;
+            top: 50px;
+            left: 50px;
+            /* 三号盒子会上去而二号元素原来的位置不会保留但二号元素的位置始终固定在相对于网页的一定距离 */
+            /* 这里也是脱离文档流的，也就是三号盒子会自动补齐二号元素空缺的位置 */
+            /* 同时也是默认浏览器视窗的位置 */
+            z-index: 3;
+        }
+        .pos-ab {
+            position: absolute;
+            top: 50px;
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">1</div>
+    <div class="box pos">2</div>
+    <!-- 这里属性值之间用空格间隔开就可以了而且要在同一个引号里面 -->
+    <div class="box pos-ab">3</div>
+    这里涉及一个谁覆盖谁的问题一般来说一般是由下面的标签覆盖上面的标签如果想改变这个谁覆盖谁的问题可以用z-index来解决数值大的一般在上面
+</body>
+</html>

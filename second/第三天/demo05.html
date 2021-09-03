@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            /* 可以添加四个值分别是左上右上右下左下 */
+            box-shadow: 10px 10px 10px blue;
+            /* 分别是x轴的距离，y轴的距离，模糊的程度 */
+            /* 这里已改怎么使用伪选择器让鼠标放上去的时候自动实现变化（形变） */
+            transform: rotate(-50px -50px);
+            /* 记住这个格式是什么样的分别还有什么作用:有位移，有缩放，有旋转 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">hello</div>
+    <!-- 怎么把hello固定在div盒子元素的中间应该怎么调整 -->
+</body>
+</html>

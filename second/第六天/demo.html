@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hover-circle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  color: #666;
+}
+
+.hover-circle::before {
+  width: 8.5rem;
+  height: 8.5rem;
+  border: 3px solid pink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+}
+
+.hover-circle::after {
+  width: 7.2rem;
+  height: 7.2rem;
+  border: 6px solid pink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+}
+
+.hover-circle:hover::before,
+.hover-circle:hover::after {
+  animation-duration: 0.8s;
+  animation-delay: 0.2s;
+  animation: circle 0.8s;
+}
+
+@keyframes circle {
+  0% {
+    opacity: 0;
+    scale: 1;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+    scale: 1.03;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1.03;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="hover-circle">CSS</div>
+</body>
+</html>
