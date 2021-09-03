@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="image\children-5833719__340 (1).png" alt="">
+    <div>上午好，好好写代码</div>
+    <script>
+        // 做成的小效果在不同的时间里显示不同的图片和文字
+        // 先获取元素？来作什么，要接住吗——因为获取了之后才能进行修改调整
+        var img = document.querySelector('img');
+        // 通过元素来选中标签
+        var div = document.querySelector('div');
+        var date = new date;
+        // 实例化对象更具体
+        var h = date.gethours();
+        // 用一个变量接住使用已经实例化的对象的方法来获取具体的时间
+        if(h < 12){
+            img.src = 'image\children-5833719__340 (1).png'
+            div.innerHTML = '上午好，好好写代码'
+        }else if(h < 18){
+            img.src = 'image\student-3500990__340 (1).png'
+            div.innerHTML = '下午好，好好写代码'
+            // 不需要分号
+        }
+        else{
+            img.src = 'image\writing-1149962__340.png'
+            div.innerHTML = '晚上好，好好写代码'
+        }
+
+    </script>
+</body>
+</html>

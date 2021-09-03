@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var method = function(x){
+    if(x == 0 && x >= 1534236469 && x<= -2147483648){
+        return 0;
+    }else if(0 <= x){
+        var str = String(x);
+        var i = '';
+        for(var j = str.length - 1;j >= 0;j--){
+            i += str[j];
+        }
+        var a = parseInt(i)
+        return a;
+    }
+    else{
+        var o = Math.abs(x);
+        var k = String(o);
+        var l = '-';
+        for(var m = k.length - 1;m >= 0;m--){
+            l += k[m];
+        }
+        var b = parseInt(l);
+        return b;
+    }
+}
+
+console.log(method(1534236469));
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            background-color: rgb(207, 107, 107);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 需求:点击按钮的时候隐藏盒子 -->
+    <!-- 实现:要有一个按钮和一个盒子
+    给目标元素添加监听器click,然后执行事件程序 -->
+    <button class="btn" onclick="div.style.backgroundColor = 'white'">按钮</button>
+    <div class="box"></div>
+    <script>
+        
+        var div = document.getElementById('box');
+        div.onclick = function() {
+            this.style.backgroundColor = 'pink';
+        }
+    </script>
+</body>
+</html>

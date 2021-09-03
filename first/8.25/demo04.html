@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .code {
+            width: 50px;
+            height: 50px;
+        }
+
+        .code a {
+            display: block;
+            /* 把a标签变成块状元素使他拥有独占一行的能力否则*** */
+            width: 50px;
+            height: 50px;
+            background: url(http://img.smyhvae.com/20180127_QRcode_small.png) no-repeat -159px -51px;
+            position: relative;
+
+        }
+        .code-big {
+            position: absolute;
+            /* 脱离了文本流?相对于网页移动 */
+            top: 10px;
+            left: 80px;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="code">
+        <a href="#"></a>
+        <img src="二维码.png" alt="" class="code-big hide"/>
+    </div>
+    <script>
+        // 这其实也算嵌套了一套结构
+        window.onload = function() {
+            // 需求:鼠标放在a链接上显示二维码(添加show类名,去掉hide类名目的是主要影响类名下设置的样式)
+            // 鼠标移开a链接隐藏二维码和上面相反
+            // 获取事件源和相关元素
+            var a = document.querySelector('a');
+            var div = document.getElementById('code-big');
+            // 绑定事件
+            a.onmouseover = fn1;
+            // 对a元素鼠标悬停的时候添加事件fn1
+            // 其实也类似于btn.onclick = function...
+            a.onmouseout = fn2;
+
+            // 定义方法
+            function fn1(){
+                // 书写事件驱动程序
+                div.className = div.className.replace("hide", "show");
+                // 表示对图片元素的类名进行操作
+            }
+            function fn2(){
+                div.className = div.className.replace("show","hide");
+                // 更改类名
+            }
+        }
+    </script>
+</body>
+</html>

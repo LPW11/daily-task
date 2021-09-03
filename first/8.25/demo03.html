@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            margin: 10px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <button id="btn">隐藏</button>
+    <div>
+        生命壹号
+    </div>
+    <script>
+        // 需求:点击button,隐藏盒子.改变文字,在点击按钮显示出来
+        // 1.获取事件源和相关元素
+        // 2.添加事件
+        // 3.书写事件驱动程序
+
+        // 1.获得事件源(承上启下)和相关元素
+        var btn = document.getElementById('btn');
+        var div = document.querySelector('div');
+        // 2.绑定事件
+        btn.onclick = function(){
+            // 3.书写事件驱动程序
+            // 判断btn的innerHTML属性值(是里面的文本)如果为隐藏就隐藏盒子
+            // 并修改按钮内容为显示
+            // 反之,则显示,并修改按钮内容为隐藏
+            if(this.innerHTML === '隐藏') {
+                div.className = 'hide'
+                // 这里是在div元素中添加类名的属性
+                btn.innerHTML = '显示'
+            }else{
+                div.className = 'show';
+                btn.innerHTML = '隐藏'
+            }
+        }
+
+
+        // 添加判断条件
+        // 对元素做出改变:
+        //     直接改
+        //     间接改:在元素中添加类名(样式)*(不同条件下会变更)
+        // 根据需要更改样式
+        // 给事件源做出变化(根据所需)
+    </script>
+</body>
+</html>
