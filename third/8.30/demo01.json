@@ -1,0 +1,23 @@
+{
+    "blogname" : "luwenyi的博客",
+    "nav" : [
+        {
+            "language" : "javascipt",
+            "URL" : "github",
+            "project" : "blog",
+            "experience" : "university live"
+        }
+    ],
+    "content" : [
+        {
+            "live" : "我的大学生活",
+            "study" : "我的学习经历",
+            "project1" : "我做过的项目",
+            "competition" : "我的比赛经历",
+            "me" :"关于我"
+
+            
+        }
+    ]
+    
+}
